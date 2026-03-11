@@ -1,0 +1,774 @@
+@prefix : <http://www.semanticweb.org/mauricioalmeida/ontologies/2025/6/untitled-ontology-1048/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix Doc_Acts: <https://github.com/jonathanvajda/cco-d-acts/blob/main/cco-d-acts.ttl> .
+@base <http://www.semanticweb.org/mauricioalmeida/ontologies/2025/6/untitled-ontology-1048/> .
+
+<http://purl.org/ncor-br/orgon/org> rdf:type owl:Ontology ;
+                                     owl:versionIRI <http://purl.org/ncor-br/orgon/2025/1.0/org> ;
+                                     owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+<http://purl.obolibrary.org/obo/IAO_0000412> rdfs:label "imported from"@en .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition_source
+<http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> rdf:type owl:AnnotationProperty ;
+                                                                           rdfs:label "definition source"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology
+<http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> rdf:type owl:AnnotationProperty ;
+                                                                                rdfs:label "is curated in ontology"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "059-BFO" ;
+                                             rdfs:label "realizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000059
+<http://purl.obolibrary.org/obo/BFO_0000059> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "256-BFO" ;
+                                             rdfs:label "concretizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000101
+<http://purl.obolibrary.org/obo/BFO_0000101> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "254-BFO" ;
+                                             rdfs:label "is carrier of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000115
+<http://purl.obolibrary.org/obo/BFO_0000115> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "230-BFO" ;
+                                             rdfs:label "has member part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has member part c =Def c member part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+<http://purl.obolibrary.org/obo/BFO_0000117> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "202-BFO" ;
+                                             rdfs:label "has occurrent part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has occurrent part c =Def c occurrent part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Mary's life has occurrent part Mary's 5th birthday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+<http://purl.obolibrary.org/obo/BFO_0000132> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "003-BFO" ;
+                                             rdfs:label "occurrent part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000139
+<http://purl.obolibrary.org/obo/BFO_0000139> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "078-BFO" ;
+                                             rdfs:label "temporal part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b temporal part of c =Def b occurrent part of c & (b and c are temporal regions) or (b and c are spatiotemporal regions & b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries & b occupies a temporal region that is an occurrent part of the temporal region that c occupies)"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Your heart beating from 4pm to 5pm today is a temporal part of the process of your heart beating; the 4th year of your life is a temporal part of your life, as is the process boundary which separates the 3rd and 4th years of your life; the first quarter of a game of football is a temporal part of the whole game"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "221-BFO" ;
+                                             rdfs:label "continuant part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "271-BFO" ;
+                                             rdfs:label "has continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has continuant part c =Def c continuant part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000194
+<http://purl.obolibrary.org/obo/BFO_0000194> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "260-BFO" ;
+                                             rdfs:label "specifically depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "s-depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b specifically depended on by c =Def c specifically depends on b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Coloured object specifically depended on by colour"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+<http://purl.obolibrary.org/obo/BFO_0000196> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000194> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "053-BFO" ;
+                                             rdfs:label "bearer of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b bearer of c =Def c inheres in b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/designates
+<http://www.ontologyrepository.com/CommonCoreOntologies/designates> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> ;
+                                                                    <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                    rdfs:label "designates"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "x designates y iff x is an instance of an Information Content Entity, and y is an instance of an Entity, such that given some context, x uniquely distinguishes y from other entities."@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#example> "a URL designates the location of a Web Page on the internet" ,
+                                                                                                                  "a person's name designates that person" ,
+                                                                                                                  "a vehicle identification number designates some vehicle" ;
+                                                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_about
+<http://www.ontologyrepository.com/CommonCoreOntologies/is_about> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://purl.obolibrary.org/obo/IAO_0000136" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                  rdfs:label "is about"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "A primitive relationship between an Information Content Entity and some Entity."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_affiliated_with
+<http://www.ontologyrepository.com/CommonCoreOntologies/is_affiliated_with> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                            <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                            rdfs:label "is affiliated with"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/permits
+<http://www.ontologyrepository.com/CommonCoreOntologies/permits> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> ;
+                                                                 <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                 <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                 rdfs:label "permits"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "x permits y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that y may occur."@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be asymmetric and irreflexive. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/prescribes
+<http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> ;
+                                                                    <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                    rdfs:label "prescribes"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#example> "A blueprint prescribes some artifact or facility by being a model for it." ,
+                                                                                                                  "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations." ,
+                                                                                                                  "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation." .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/prohibits
+<http://www.ontologyrepository.com/CommonCoreOntologies/prohibits> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                   rdfs:label "prohibits"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prohibits y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that some y must not occur."@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be asymmetric and irreflexive. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/requires
+<http://www.ontologyrepository.com/CommonCoreOntologies/requires> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                  rdfs:label "requires"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "x requires y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that some y must occur."@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be asymmetric and irreflexive. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000002
+<http://purl.obolibrary.org/obo/BFO_0000002> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000002>
+                                                             ] .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+<http://purl.obolibrary.org/obo/BFO_0000004> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                             ] .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000011
+<http://purl.obolibrary.org/obo/BFO_0000011> owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+<http://purl.obolibrary.org/obo/BFO_0000015> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                                               )
+                                                                                 ]
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000139> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                             ] ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000035> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+<http://purl.obolibrary.org/obo/BFO_0000040> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000140>
+                                                                                               )
+                                                                                 ]
+                                                             ] .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Act
+<http://www.ontologyrepository.com/CommonCoreOntologies/Act> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                             rdfs:label "Act"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "A Process in which at least one Agent plays a causative role."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                            <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Communication&oldid=1063752020"^^xsd:anyURI ;
+                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                            rdfs:label "Act of Communication"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act in which some Information Content Entity is transferred from some Agent to Another."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationProcessing
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfInformationProcessing> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                                    <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                                    rdfs:label "Act of Information Processing"@en ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act in which one or more input Information Content Entities are received, manipulated, transferred, or stored by an Agent."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPlanning
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPlanning> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                       <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                       rdfs:label "Act of Planning"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act that involves making a Plan to achieve some specified Objective."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPossession
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPossession> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                         <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://en.wikipedia.org/wiki/Possession_(law)" ;
+                                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                         rdfs:comment "In all cases, to possess something, an agent must have an intention to possess it."@en ;
+                                                                         rdfs:label "Act of Possession"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act in which an agent intentionally exercises control towards a thing."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission> rdf:type owl:Class ;
+                                                                          owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation>
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/permits> ;
+                                                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                                     ]
+                                                                                                                   ) ;
+                                                                                                rdf:type owl:Class
+                                                                                              ] ;
+                                                                          rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                          <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                          rdfs:label "Action Permission"@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Authorization"@en ,
+                                                                                                                         "License"@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> "A Process Regulation that permits some Process."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition> rdf:type owl:Class ;
+                                                                           owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation>
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/prohibits> ;
+                                                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ] ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                           <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                           rdfs:label "Process Prohibition"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> "A Process Regulation that prohibits some Process."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                          <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                          rdfs:label "Process Regulation"@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> "A Directive Information Content Entity that prescribes an Process as required, prohibited, or permitted, and is the output of an Process which realizes some Authority Role."@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#scopeNote> "Although regulations often regulate processes which involve agents--as the regulating or regulated participant--it is unclear how causally active an agents need to be in those regulated processes. For example, it is not clear how causally active a human agent is in the process of a traffic light regulating the motion of a self-driving vehicle."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement> rdf:type owl:Class ;
+                                                                           owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation>
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/requires> ;
+                                                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ] ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                           <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                           rdfs:label "Process Requirement"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Duty"@en ,
+                                                                                                                          "Obligation"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> "A Process Regulation that requires some Process."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Agent
+<http://www.ontologyrepository.com/CommonCoreOntologies/Agent> rdf:type owl:Class ;
+                                                               owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                                                                            owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/AgentCapability>
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ] ;
+                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                               <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                               <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                               rdfs:label "Agent"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that bears an Agent Capability."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AgentCapability
+<http://www.ontologyrepository.com/CommonCoreOntologies/AgentCapability> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                                                         <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                         rdfs:label "Agent Capability"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#definition> "A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Animal
+<http://www.ontologyrepository.com/CommonCoreOntologies/Animal> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Organism> ;
+                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Animal&oldid=1063873549"^^xsd:anyURI ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                rdfs:label "Animal"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Artifact
+<http://www.ontologyrepository.com/CommonCoreOntologies/Artifact> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                  rdfs:label "Material Artifact"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that was designed by some Agent to realize a certain Function."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CommercialOrganization
+<http://www.ontologyrepository.com/CommonCoreOntologies/CommercialOrganization> rdf:type owl:Class ;
+                                                                                owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/Organization>
+                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                                                                                             owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/CommercialRole>
+                                                                                                                           ]
+                                                                                                                         ) ;
+                                                                                                      rdf:type owl:Class
+                                                                                                    ] ;
+                                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Organization> ;
+                                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                                rdfs:label "Commercial Organization"@en ;
+                                                                                <http://www.w3.org/2004/02/skos/core#definition> "An Organization that is the bearer of a Commercial Role and whose primary objective is to make a profit from the provision of goods or services."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CommercialRole
+<http://www.ontologyrepository.com/CommonCoreOntologies/CommercialRole> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                        <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                        <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                        rdfs:label "Commercial Role"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "A Role that inheres in an Organization by virtue of its establishment as a for-profit business."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> ;
+                                                                                             owl:disjointWith <http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeInformationContentEntity> ,
+                                                                                                              <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                                             rdfs:label "Descriptive Information Content Entity"@en ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Descriptive ICE"@en ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions that describe some Entity."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeInformationContentEntity> rdf:type owl:Class ;
+                                                                                             owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity>
+                                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                                          owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/designates> ;
+                                                                                                                                          owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                                                                        ]
+                                                                                                                                      ) ;
+                                                                                                                   rdf:type owl:Class
+                                                                                                                 ] ;
+                                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> ;
+                                                                                             owl:disjointWith <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                                             <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                                             rdfs:label "Designative Information Content Entity"@en ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Designative ICE"@en ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of symbols that denote some Entity."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> rdf:type owl:Class ;
+                                                                                           owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity>
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> ;
+                                                                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ] ;
+                                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> ;
+                                                                                           <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                                           rdfs:label "Directive Information Content Entity"@en ;
+                                                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Directive ICE"@en ;
+                                                                                           <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Document
+<http://www.ontologyrepository.com/CommonCoreOntologies/Document> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Document&oldid=1057829688"^^xsd:anyURI ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                  rdfs:label "Document"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "An Information Bearing Artifact that is designed to bear some specific Information Content Entity in a series of paragraphs of text or diagrams in the form of physical pieces of paper or an electronic word processor file."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DocumentForm
+<http://www.ontologyrepository.com/CommonCoreOntologies/DocumentForm> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Document> ;
+                                                                      <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/wiki/Form_(document)" ;
+                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                      rdfs:label "Document Form"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "A Document having Document Fields as parts in which to write or select prescribed content."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfAgents
+<http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfAgents> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ,
+                                                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000115> ;
+                                                                                                                owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/Agent>
+                                                                                                              ]
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000115> ;
+                                                                                                                owl:allValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/Agent>
+                                                                                                              ]
+                                                                                                            ) ;
+                                                                                         rdf:type owl:Class
+                                                                                       ] ;
+                                                                       <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                       rdfs:label "Group of Agents"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "An Object Aggregate that has only Agents as parts."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact
+<http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Artifact> ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                                                      owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity>
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                                                                      owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/InformationMediumArtifact>
+                                                                                                    ] ;
+                                                                                    <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                                    rdfs:label "Information Bearing Artifact"@en ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A Material Artifact that carries an Information Content Entity and is designed to do so using a particular format or structure."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> rdf:type owl:Class ;
+                                                                                  owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                               owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> ;
+                                                                                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                                                             ]
+                                                                                                                           ) ;
+                                                                                                        rdf:type owl:Class
+                                                                                                      ] ;
+                                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://purl.obolibrary.org/obo/IAO_0000030" ;
+                                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                                                  rdfs:label "Information Content Entity"@en ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "ICE"@en ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#definition> "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationMediumArtifact
+<http://www.ontologyrepository.com/CommonCoreOntologies/InformationMediumArtifact> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Artifact> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                                   rdfs:comment "An empty notebook, when manufactured, is a medium but not yet a carrier of information content. However, a book, in the sense of a novel or collection of philosophical essays or poems, depends necessarily on it carrying some information content. Thus, there are no empty books. Likewise, there are no empty databases, only portions of digital storage that have not yet been configured to carry some information content according to a database software application."@en ;
+                                                                                   rdfs:label "Information Medium Artifact"@en ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Artifact that is designed to have some Information Bearing Artifact as part."@en ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#example> "A magnetic hard drive" ,
+                                                                                                                                 "A notebook" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
+<http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ;
+                                                                        <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                        <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                        rdfs:label "Planned Act"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "Intentional Act"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Objective
+<http://www.ontologyrepository.com/CommonCoreOntologies/Objective> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://en.wikipedia.org/wiki/Objective_(goal)" ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                   rdfs:label "Objective"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Directive Information Content Entity that prescribes some projected state that some Agent intends to achieve."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Organism
+<http://www.ontologyrepository.com/CommonCoreOntologies/Organism> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                                                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                  <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                  rdfs:label "Organism"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "An Object that is an Animal or Plant."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Organization
+<http://www.ontologyrepository.com/CommonCoreOntologies/Organization> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfAgents> ;
+                                                                      <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://purl.obolibrary.org/obo/OBI_0000245" ;
+                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                      rdfs:comment "Members of organizations are either Organizations themselves or individual Persons. Members can bear specific Organization Member Roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the Organization by the organization members."@en ;
+                                                                      rdfs:label "Organization"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationCapability
+<http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationCapability> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/AgentCapability> ;
+                                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                                rdfs:label "Organization Capability"@en ;
+                                                                                <http://www.w3.org/2004/02/skos/core#definition> "An Agent Capability that inheres in an Organization to the extent of that Organization's capacity to realize it in Intentional Acts of a certain type."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMember
+<http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMember> rdf:type owl:Class ;
+                                                                            owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/Person>
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                                                                                         owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMemberRole>
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ] ;
+                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Person> ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/is_affiliated_with> ;
+                                                                                              owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/Organization>
+                                                                                            ] ;
+                                                                            <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                            rdfs:label "Organization Member"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "A Person who is affiliated with some Organization by being a member of that Organization."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMemberRole
+<http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMemberRole> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                                rdfs:label "Organization Member Role"@en ;
+                                                                                <http://www.w3.org/2004/02/skos/core#definition> "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill as a member of some Organization."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Person
+<http://www.ontologyrepository.com/CommonCoreOntologies/Person> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Animal> ;
+                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                rdfs:label "Person"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Human"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "An Animal that is a member of the species Homo sapiens."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification
+<http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                                             owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/Objective>
+                                                                                           ] ;
+                                                                           <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Plan&oldid=1047320560"^^xsd:anyURI ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                                                                           rdfs:label "Plan"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> "A Directive Information Content Entity that prescribes some set of intended Intentional Acts through which some Agent expects to achieve some Objective."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Report
+<http://www.ontologyrepository.com/CommonCoreOntologies/Report> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Document> ;
+                                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Report&oldid=1063765657"^^xsd:anyURI ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                rdfs:label "Report"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "A Document that is designed to bear some specific Information Content Entity that conveys an account of some event, situation, or the result of some observation or inquiry."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SocialAct
+<http://www.ontologyrepository.com/CommonCoreOntologies/SocialAct> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://en.wiktionary.org/wiki/commually" ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                   rdfs:label "Social Act"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Transcript
+<http://www.ontologyrepository.com/CommonCoreOntologies/Transcript> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Document> ;
+                                                                    <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Transcript&oldid=1038510063"^^xsd:anyURI ;
+                                                                    <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ArtifactOntology"^^xsd:anyURI ;
+                                                                    rdfs:label "Transcript"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A Document that is designed to bear some specific Information Content Entity that was originally recorded in a different medium."@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/UnintentionalAct
+<http://www.ontologyrepository.com/CommonCoreOntologies/UnintentionalAct> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ;
+                                                                          <http://purl.obolibrary.org/obo/IAO_0000412> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-11-03/AllCoreOntology" ;
+                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                          rdfs:label "Unplanned Act"@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Unintentional Act"@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> "An Act in which at least one Agent plays a causative role and which is not prescribed by some Objective held by any of the Agents."@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
